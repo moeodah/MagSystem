@@ -36,13 +36,13 @@
                 <br/>
                 <v-spacer/>
 
-                <button block class="loginButton"
+                <v-btn block color="primary"
                  @click="login " 
                  :to="{
                   name: 'employees'
                   }"
                  @submit="login"
-                  >Login</button>
+                  >Login</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
