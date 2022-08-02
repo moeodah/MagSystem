@@ -36,7 +36,9 @@
                 <br/>
                 <v-spacer/>
 
-                <v-btn block color="primary" @click="login" :loading="loading">Login</v-btn>
+                <button class="primary"
+                @keyup.enter="login"
+                 @click="login" :loading="loading">Login</button>
               </v-card-actions>
             </v-card>
           </v-flex>
