@@ -37,8 +37,8 @@
                 <v-spacer/>
 
                 <button block class="loginButton"
-                @keyup.enter="login"
-                 @click="login" :loading="loading">Login</button>
+                 @click="login" :loading="loading"
+                 @submit="login">Login</button>
               </v-card-actions>
             </v-card>
           </v-flex>
