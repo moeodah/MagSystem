@@ -37,10 +37,12 @@
                 <v-spacer/>
 
                 <button block class="loginButton"
-                 @click="login" :loading="loading"
-                 @submit="login">Login</button>
-                 <p>An absolute URL: <a href="https://www.w3schools.com">W3Schools</a></p>
-
+                 @click="login " 
+                 :to="{
+                  name: 'employees'
+                  }"
+                 @submit="login"
+                  >Login</button>
               </v-card-actions>
             </v-card>
           </v-flex>
