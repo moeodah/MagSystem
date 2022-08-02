@@ -99,6 +99,7 @@
       top>
       {{ result }}
     </v-snackbar>
+      
     <v-menu  class="toolbar-menu-item" offset-y origin="center center" :nudge-bottom="10" transition="scale-transition">
 
       <v-btn icon flat slot="activator" @click="notifications.map(x => x.isActive = false)">
@@ -110,11 +111,7 @@
         </v-badge>
       </v-btn>
 
-       <v-btn :to="{
-          name: 'employees'
-        }">>
-        Employees
-      </v-btn>
+       
 
       <v-card class="elevation-0">
         <v-toolbar card dense color="transparent">
@@ -174,6 +171,14 @@
       </v-list>
     </v-menu>
     <v-toolbar-items>
+    <v-btn
+         flat 
+        dark
+         :to="{
+          name: 'employees'
+        }">
+        Employees
+      </v-btn>
       <v-btn 
         v-if="!$store.state.isUserLoggedIn"
         flat 
