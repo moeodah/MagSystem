@@ -110,6 +110,12 @@
         </v-badge>
       </v-btn>
 
+       <v-btn :to="{
+          name: 'employees'
+        }">>
+        Employees
+      </v-btn>
+
       <v-card class="elevation-0">
         <v-toolbar card dense color="transparent">
           <v-toolbar-title><h5>You have {{ notifications.length }} new notification(s)</h5></v-toolbar-title>
