@@ -4,12 +4,20 @@ const Sequelize = require('sequelize')
 const config = require('../config/config')
 const db = {}
 
-const sequelize = new Sequelize(
+const sequelize = new Sequelize('employees','root','Geniune9',{ dialect:'mysql'},
+
   config.db.database,
   config.db.user,
   config.db.password,
   config.db.options
 )
+
+sequelize.authenticate().then(() => {
+  console.log("Connection Succesful");
+}).catch((err) => {
+  console.logh("Error connecting")
+});
+
 
 fs
   .readdirSync(__dirname)
